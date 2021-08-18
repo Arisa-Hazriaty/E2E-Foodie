@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>TC2_MencariMakanan</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>41876a00-4ce2-457d-9282-500e3a17596e</testCaseGuid>
+   <variable>
+      <defaultValue>'Midoricha - Ice Cream &amp; Drink'</defaultValue>
+      <description></description>
+      <id>c281b5ae-56cf-4e12-807e-fcb7dd9447bf</id>
+      <masked>false</masked>
+      <name>expected2</name>
+   </variable>
+   <variable>
+      <defaultValue>'Login'</defaultValue>
+      <description></description>
+      <id>19e711e0-7c8e-4423-8f30-94c04a6737fc</id>
+      <masked>false</masked>
+      <name>expected3</name>
+   </variable>
+</TestCaseEntity>

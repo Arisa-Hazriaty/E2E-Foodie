@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TestCaseEntity>
+   <description></description>
+   <name>LoginNegative</name>
+   <tag></tag>
+   <comment></comment>
+   <testCaseGuid>af84c7fd-0f48-43ea-ada5-53f6b91ada0c</testCaseGuid>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>bba3a2fe-8d02-449a-ae9f-553d6e2c35f7</id>
+      <masked>false</masked>
+      <name>Email</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>8c030bc9-3a8c-450e-ac5f-4899a3aadf77</id>
+      <masked>false</masked>
+      <name>Password</name>
+   </variable>
+   <variable>
+      <defaultValue>''</defaultValue>
+      <description></description>
+      <id>957bdc9f-dcca-43c1-8e25-9083934e52c8</id>
+      <masked>false</masked>
+      <name>ExpectedResult</name>
+   </variable>
+</TestCaseEntity>

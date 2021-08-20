@@ -32,7 +32,6 @@ System.out.println('Current absolute path is: ' + s)
 Mobile.startApplication(s, false)
 
 //Mobile.tapAndHold(findTestObject('profile/btn-close'), 0, 0)
-
 Mobile.tap(findTestObject('profile/btn-profile'), 0)
 
 Mobile.tap(findTestObject('profile/btn-login'), 0)

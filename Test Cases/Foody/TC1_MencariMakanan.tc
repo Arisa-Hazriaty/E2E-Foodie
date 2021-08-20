@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <TestCaseEntity>
    <description></description>
-   <name>TC2_MencariMakanan</name>
+   <name>TC1_MencariMakanan</name>
    <tag></tag>
    <comment></comment>
    <testCaseGuid>41876a00-4ce2-457d-9282-500e3a17596e</testCaseGuid>

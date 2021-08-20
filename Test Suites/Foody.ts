@@ -39,6 +39,6 @@
       <guid>f2ffb8ae-6937-4dc0-ac03-ae3e790dc9cd</guid>
       <isReuseDriver>false</isReuseDriver>
       <isRun>true</isRun>
-      <testCaseId>Test Cases/Foody/TC5_Logout</testCaseId>
+      <testCaseId>Test Cases/Foody/TC_Logout</testCaseId>
    </testCaseLink>
 </TestSuiteEntity>

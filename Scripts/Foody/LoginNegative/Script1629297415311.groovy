@@ -31,25 +31,23 @@ System.out.println('Current absolute path is: ' + s)
 
 Mobile.startApplication(s, false)
 
-//Mobile.tapAndHold(findTestObject('profile/btn-close'), 0, 0)
+Mobile.tap(findTestObject('Login-Negative/btn-profile'), 0)
 
-Mobile.tap(findTestObject('profile/btn-profile'), 0)
+Mobile.tap(findTestObject('Login-Negative/btn-login'), 0)
 
-Mobile.tap(findTestObject('profile/btn-login'), 0)
-
-Mobile.tap(findTestObject('profile/btn-connect-fb'), 0)
+Mobile.tap(findTestObject('Login-Negative/btn-connect-fb'), 0)
 
 def data = findTestData('Login-Negatice')
 
 for (def rowLogin = 1; rowLogin <= data.getRowNumbers(); rowLogin++) {
-    Mobile.setText(findTestObject('profile/inputemail'), data.getValue('Email', rowLogin), 0)
+    Mobile.setText(findTestObject('Login-Negative/inputemail'), data.getValue('Email', rowLogin), 0)
 
-    Mobile.setText(findTestObject('profile/inputpass'), data.getValue('Password', rowLogin), 0)
+    Mobile.setText(findTestObject('Login-Negative/inputpass'), data.getValue('Password', rowLogin), 0)
 
-    Mobile.tap(findTestObject('profile/btn-masuk'), 0)
+    Mobile.tap(findTestObject('Login-Negative/btn-masuk'), 0)
 
     if (data.getValue('Type', rowLogin) == 'Invalid pass') {
-        actualResult = Mobile.getText(findTestObject('profile/txt-katasandisalah'), 0)
+        actualResult = Mobile.getText(findTestObject('Login-Negative/txt-katasandisalah'), 0)
 
         Mobile.verifyMatch(actualResult, data.getValue('ExpectedResult', rowLogin), false)
     }

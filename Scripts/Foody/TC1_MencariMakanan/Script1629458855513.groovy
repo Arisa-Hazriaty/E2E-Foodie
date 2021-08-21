@@ -16,40 +16,20 @@ import com.kms.katalon.core.webui.keyword.WebUiBuiltInKeywords as WebUI
 import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
-import java.nio.file.Path as Path
-import java.nio.file.Paths as Paths
 
-Path currentRelativePath = Paths.get('')
+Mobile.startExistingApplication('com.foody.vn.activity', FailureHandling.STOP_ON_FAILURE)
 
-def s = currentRelativePath.toAbsolutePath().toString()
+Mobile.tap(findTestObject('Android/Foody/Mencari_Makanan/btn_home'), 30)
 
-System.out.println('Current absolute path is: ' + s)
+Mobile.tap(findTestObject('Android/Foody/Mencari_Makanan/field_search'), 10)
 
-s = (s + '\\Data Files\\Foody Find Reserve Delivery_v5.8.7_apkpure.com.apk')
+Mobile.setText(findTestObject('Android/Foody/Mencari_Makanan/field_search_edit'), 'ice cream', 30)
 
-System.out.println('Current absolute path is: ' + s)
+Mobile.tap(findTestObject('Android/Foody/Mencari_Makanan/android.widget.TextView - Midoricha - Ice Cream  Drink'), 30)
 
-Mobile.startApplication(s, false)
+def actual = Mobile.getText(findTestObject('Android/Foody/Mencari_Makanan/lbl_detil_food_product'), 0)
 
-Mobile.tap(findTestObject('profile/btn-profile'), 0)
+def expected = Mobile.getText(findTestObject('Android/Foody/Mencari_Makanan/lbl_detil_food_product'), 0)
 
-Mobile.tap(findTestObject('profile/btn-login'), 0)
-
-Mobile.tap(findTestObject('profile/btn-connect-fb'), 0)
-
-def data = findTestData('Login-Negatice')
-
-for (def rowLogin = 1; rowLogin <= data.getRowNumbers(); rowLogin++) {
-    Mobile.setText(findTestObject('profile/inputemail'), data.getValue('Email', rowLogin), 0)
-
-    Mobile.setText(findTestObject('profile/inputpass'), data.getValue('Password', rowLogin), 0)
-
-    Mobile.tap(findTestObject('profile/btn-masuk'), 0)
-
-    if (data.getValue('Type', rowLogin) == 'Invalid pass') {
-        actualResult = Mobile.getText(findTestObject('profile/txt-katasandisalah'), 0)
-
-        Mobile.verifyMatch(actualResult, data.getValue('ExpectedResult', rowLogin), false)
-    }
-}
+Mobile.verifyMatch(actual, expected, false)
 

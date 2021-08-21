@@ -17,21 +17,13 @@ import com.kms.katalon.core.windows.keyword.WindowsBuiltinKeywords as Windows
 import internal.GlobalVariable as GlobalVariable
 import org.openqa.selenium.Keys as Keys
 
-Mobile.startExistingApplication('com.foody.vn.activity', FailureHandling.STOP_ON_FAILURE)
+Mobile.tap(findTestObject('Object Repository/MencariMakananNegative/android.widget.TextView - Search for cuisine, name, address'), 
+    0)
 
-Mobile.tap(findTestObject('Android/Foody/Mencari_Makanan/btn_home'), 30)
+Mobile.setText(findTestObject('Object Repository/MencariMakananNegative/android.widget.EditText - Search for cuisine, name, address'), 
+    '?', 0)
 
-Mobile.tap(findTestObject('Android/Foody/Mencari_Makanan/field_search'), 10)
+actual = Mobile.getText(findTestObject('MencariMakananNegative/android.widget.TextView - Po Star Coffee  Movie'), 0)
 
-Mobile.setText(findTestObject('Android/Foody/Mencari_Makanan/field_search_edit'), 'ice cream', 0)
-
-Mobile.tap(findTestObject('Android/Foody/Mencari_Makanan/lbl_food_product'), 30)
-
-def actual = Mobile.getText(findTestObject('Android/Foody/Mencari_Makanan/lbl_detil_food_product'), 0)
-
-def expected = Mobile.getText(findTestObject('Android/Foody/Mencari_Makanan/lbl_detil_food_product'), 0)
-
-Mobile.verifyMatch(actual, expected, false)
-
-Mobile.verifyElementText(findTestObject('Android/Foody/Mencari_Makanan/lbl_food_product_below'), expected2)
+Mobile.verifyMatch('actual', 'Sorry! Foodie can not find what you\'re looking for', false)
 
